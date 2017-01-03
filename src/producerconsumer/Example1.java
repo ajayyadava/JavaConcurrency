@@ -5,37 +5,38 @@ import java.util.Queue;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Illustrates Producer Consumer using synchronized-wait mechanism
- *
- * <p>Producer-Consumer Problem</p>
- * Producer can't produce if the queue/buffer is full
- * Consumer can't consume if the queue/buffer is empty
- * Events/Messages should be consumed in FIFO fashion.
- *
- *
- *
- * Common mistakes:
- * 1. Since synchronization has to be done on a common lock - we use buffer
- *
- * 2. Wait and notifyAll can be called only once you have the lock otherwise they throw the illegalMonitorStateException
- *
- * 3. Because of 1 and 2. wait and notifyAll() should be called as buffer.wait() and buffer.notifyAll() instead of just wait()
- * and notifyAll();
- *
- * 4. The object on which the lock is taken(in this case buffer) should be declared as final.
- *
- * 5. wait should be called inside a while loop as when the thread wakes up might not have
- *
- * 6. Note that the thread takes the lock, then calls wait, then other thread gets the lock, does some work, calls
- * notify. So the thread gives up the lock when wait is called.
- *
- * 7. Ideal datastructure for the producer-consumer problem is a bounded queue, but we have used queue here because we
- * wanted to illustrate ""Using Conditions in Synchronized Code"" but bounded queue implementations are thread safe and
- * allow blocking operations which take care of the coordination between threads using blocking operations
- *
- * 8. Variations of add/ remove  -- (offer and poll() etc. are available in Queue interface but not applicable here
- * as the underlying datastructure that we have used is LinkedList, so
- *
+
+ Illustrates Producer Consumer using synchronized-wait mechanism
+
+ # Producer-Consumer Problem
+  Producer can't produce if the queue/buffer is full
+  Consumer can't consume if the queue/buffer is empty
+  Events/Messages should be consumed in FIFO fashion.
+
+
+
+ ## Common mistakes:
+  1. Since synchronization has to be done on a common lock - we use buffer
+
+  2. Wait and notifyAll can be called only once you have the lock otherwise they throw the illegalMonitorStateException
+
+  3. Because of 1 and 2. `wait()` and `notifyAll()` should be called as `buffer.wait()` and `buffer.notifyAll()` instead
+ of just `wait()` and `notifyAll()`;
+
+  4. The object on which the lock is taken(in this case buffer) should be declared as final.
+
+  5. wait should be called inside a while loop as when the thread wakes up might not have
+
+  6. Note that the thread takes the lock, then calls wait, then other thread gets the lock, does some work, calls
+  notify. So the thread gives up the lock when wait is called.
+
+  7. Ideal datastructure for the producer-consumer problem is a bounded queue, but we have used queue here because we
+  wanted to illustrate ""Using Conditions in Synchronized Code"" but bounded queue implementations are thread safe and
+  allow blocking operations which take care of the coordination between threads using blocking operations
+
+  8. Variations of add/ remove  -- (offer and poll() etc. are available in Queue interface but not applicable here
+  as the underlying datastructure that we have used is LinkedList, so
+
  */
 public class Example1 {
 
