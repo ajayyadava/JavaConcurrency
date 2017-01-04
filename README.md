@@ -5,8 +5,7 @@ to refresh my knowledge of Java Concurrency API
 ### How to Generate Random Numbers in Concurrent Applications
 
 In a concurrent application if different threads generate
-random number using ```Random``` class e.g. by doing 
-```Random.nextInt(10)```
+random number using ```Random``` class e.g. by doing  ```Random.nextInt(10)```
 then it can cause heavy contention on the seed and poor
 performance.
 
