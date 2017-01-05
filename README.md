@@ -54,14 +54,14 @@ threads which counted down.
     - Running Tasks periodically at a fixed rate
     - Running Task Only once after an initial delay
     - Running tasks periodically with a fixed delay between 2 instances 
-
-
-
-###### TODOs:
 - Running tasks which don't return results
 - Running tasks which return result
     - Running multiple tasks and processing first result
     - Running multiple tasks and processing all results
+
+
+
+###### TODOs:
 
 
 ### CloseableFuture
