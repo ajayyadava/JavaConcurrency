@@ -53,10 +53,21 @@ threads which counted down.
 ### Exchanger
 ### ForkJoinPool
 ### Executors
-#### CachedThreadPool
-#### ScheduledThreadpoolExecutors
-### Futures 
-### Callables
+- CachedThreadPool              (ThreadPoolExecutor)
+- FixedSizeThreadPool           (ThreadPoolExecutor)
+- SingleThreadExecutor          (Executor)
+- ScheduledThreadpoolExecutors  (ThreadPoolExecutor)
+    - Running Tasks Periodically
+    - Running Tasks after a delay
+ 
+
+
+- Running tasks which don't return results
+- Running tasks which return result
+    - Running multiple tasks and processing first result
+    - Running multiple tasks and processing all results
+
+
 ### CloseableFuture
 ### StampedLocks
 ### AtomicLong / AtomicInteger
@@ -79,3 +90,21 @@ Hint: effect is same but it is called something else (not livelock :)
 
 
 
+How to handle uncaught exceptions in the run() method of threads?
+
+ThreadGroups
+ThreadFactory
+Semaphore - Controlling a pool of resources
+
+AtomicInteger
+AtomicLong
+AtomicArrays
+
+
+Separating launching of tasks and processing their results
+
+ForkJoin - Running tasks synchronously
+Running tasks asynchronously 
+Difference between invoke(), invokeAll(), fork(), join() etc.
+
+TransferQueue
