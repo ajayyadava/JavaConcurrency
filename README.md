@@ -1,5 +1,8 @@
 Play project with code examples to some toy problems
-to refresh my knowledge of Java Concurrency API
+to refresh my knowledge of Java Concurrency API. 
+
+**NOTE**: Some examples contain idioms not good for production code but are 
+here just to remind me of oddities / gotchas / things to remember.
 
 
 ### How to Generate Random Numbers in Concurrent Applications
@@ -34,16 +37,30 @@ reader can continue to read even if a Writer is waiting.
 
 
 
-### CountDownLatch
-### Phaser
 ### Semaphore
+- Semaphores and concept of lock ownership
+- Semaphores like a CountdownLatch
+
+
+### CountDownLatch
+- Demonstrate that countdown is just a count and not necessarily number of 
+threads which counted down.
+
+
+### Phaser
+
 ### CyclicBarrier
 ### Exchanger
 ### ForkJoinPool
+### Executors
+#### CachedThreadPool
+#### ScheduledThreadpoolExecutors
 ### Futures 
 ### Callables
 ### CloseableFuture
-
+### StampedLocks
+### AtomicLong / AtomicInteger
+### AtomicLongAccumulators
 
 
 
