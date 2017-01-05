@@ -33,5 +33,7 @@ public class ExecuteOnceAfterDelay {
         // Execute only once - after a delay of 100 Miliseconds
         executor.schedule(new Task("t2"), 100, TimeUnit.MILLISECONDS);
 
+        TimeUnit.MILLISECONDS.sleep(200);
+        executor.shutdown();
     }
 }
