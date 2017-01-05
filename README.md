@@ -46,22 +46,18 @@ reader can continue to read even if a Writer is waiting.
 - Demonstrate that countdown is just a count and not necessarily number of 
 threads which counted down.
 
-
-### Phaser
-
-### CyclicBarrier
-### Exchanger
-### ForkJoinPool
 ### Executors
 - CachedThreadPool              (ThreadPoolExecutor)
 - FixedSizeThreadPool           (ThreadPoolExecutor)
 - SingleThreadExecutor          (Executor)
 - ScheduledThreadpoolExecutors  (ThreadPoolExecutor)
-    - Running Tasks Periodically
-    - Running Tasks after a delay
- 
+    - Running Tasks periodically at a fixed rate
+    - Running Task Only once after an initial delay
+    - Running tasks periodically with a fixed delay between 2 instances 
 
 
+
+###### TODOs:
 - Running tasks which don't return results
 - Running tasks which return result
     - Running multiple tasks and processing first result
@@ -72,12 +68,7 @@ threads which counted down.
 ### StampedLocks
 ### AtomicLong / AtomicInteger
 ### AtomicLongAccumulators
-
-
-
-
-
-###### TODOs:
+### AtomicArrays
 
 1. Show an example of deadlock.
 
@@ -96,15 +87,12 @@ ThreadGroups
 ThreadFactory
 Semaphore - Controlling a pool of resources
 
-AtomicInteger
-AtomicLong
-AtomicArrays
-
-
 Separating launching of tasks and processing their results
 
-ForkJoin - Running tasks synchronously
+### Phaser
+### CyclicBarrier
+### Exchanger
+### ForkJoinPool
 Running tasks asynchronously 
 Difference between invoke(), invokeAll(), fork(), join() etc.
-
 TransferQueue
