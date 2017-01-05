@@ -34,5 +34,6 @@ public class FixedThreadPool {
 
         }
         System.out.println("Maximum size: " + executor.getMaximumPoolSize());
+        executor.shutdown();
     }
 }
