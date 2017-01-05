@@ -41,6 +41,5 @@ public class ExecutePeriodicallyAfterDelay {
         // 3rd at 400 + 200 + 100 = 700
         TimeUnit.MILLISECONDS.sleep(500);
         executor.shutdown();
-
     }
 }
