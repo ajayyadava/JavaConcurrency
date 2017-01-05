@@ -40,6 +40,5 @@ public class RunningPeriodicTasks {
         // 5 tasks will be triggered in 500 ms sleep, all will be executed but none will be parallel
         TimeUnit.MILLISECONDS.sleep(500);
         executor.shutdown();
-
     }
 }
