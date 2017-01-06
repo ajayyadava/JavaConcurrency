@@ -63,7 +63,7 @@ threads which counted down.
 - How to use CAS for better performance than locks
 
 ### AtomicArrays
-
+- Using CAS operations on an array of atomic variables for better performance
 
 ### LongAdder
 - LongAdder as maintaining total
@@ -74,12 +74,13 @@ performance than AtomicLong under heavy contention.
 
 Note: getting result is racy 
 
-
-###### TODOs:
-
 ### LongAccumulators
 In case of maintaining stats, this results in better
 performance than AtomicLong under heavy contention.
+
+
+###### TODOs:
+
 
 ### CloseableFuture
 ### StampedLocks
