@@ -40,7 +40,7 @@ reader can continue to read even if a Writer is waiting.
 ### Semaphore
 - Semaphores and concept of lock ownership
 - Semaphores like a CountdownLatch
-
+- Controlling access to a pool of resources using Semaphores
 
 ### CountDownLatch
 - Demonstrate that countdown is just a count and not necessarily number of 
@@ -59,16 +59,30 @@ threads which counted down.
     - Running multiple tasks and processing first result
     - Running multiple tasks and processing all results
 
+### AtomicLong / AtomicInteger
+- How to use CAS for better performance than locks
+
+### AtomicArrays
 
 
 ###### TODOs:
 
 
+### LongAdder
+- LongAdder as maintaining total
+- LongAdder as maintaining counter in stats
+
+In case of maintaining total/counter, LongAdder results in better 
+performance than AtomicLong under heavy contention. 
+
+Note: getting result is racy 
+
+### LongAccumulators
+In case of maintaining stats, this results in better
+performance than AtomicLong under heavy contention.
+
 ### CloseableFuture
 ### StampedLocks
-### AtomicLong / AtomicInteger
-### AtomicLongAccumulators
-### AtomicArrays
 
 1. Show an example of deadlock.
 
@@ -80,12 +94,12 @@ a "deadlock"
 Hint: effect is same but it is called something else (not livelock :)
 
 
-
 How to handle uncaught exceptions in the run() method of threads?
 
 ThreadGroups
+
 ThreadFactory
-Semaphore - Controlling a pool of resources
+
 
 Separating launching of tasks and processing their results
 
@@ -94,5 +108,10 @@ Separating launching of tasks and processing their results
 ### Exchanger
 ### ForkJoinPool
 Running tasks asynchronously 
+
 Difference between invoke(), invokeAll(), fork(), join() etc.
+
+FutureTask - How to execute another function post the task
+is complete.
+
 TransferQueue
