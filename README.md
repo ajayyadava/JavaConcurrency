@@ -65,9 +65,6 @@ threads which counted down.
 ### AtomicArrays
 
 
-###### TODOs:
-
-
 ### LongAdder
 - LongAdder as maintaining total
 - LongAdder as maintaining counter in stats
@@ -76,6 +73,9 @@ In case of maintaining total/counter, LongAdder results in better
 performance than AtomicLong under heavy contention. 
 
 Note: getting result is racy 
+
+
+###### TODOs:
 
 ### LongAccumulators
 In case of maintaining stats, this results in better
