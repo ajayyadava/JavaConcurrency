@@ -81,14 +81,19 @@ performance than AtomicLong under heavy contention.
 ### Exchanger 
 - Play ping pong between two threads using Exchanger
 
+### CyclicBarrier
+- Divide and Conquer using CyclicBarrier. 
+- Demonstrate that the barrier is automatically reset.
+- Demonstrate that CyclicBarrier takes into account the
+number of threads and not the number of invocations
+
+### CompletionService
+Separating concerns of submitting tasks and processing results
 
 
-###### TODOs:
+###### TODOs: 
 
 ### Phaser
-### CyclicBarrier
-
-Separating launching of tasks and processing their results
 
 ### ForkJoinPool 
 Running tasks asynchronously 
