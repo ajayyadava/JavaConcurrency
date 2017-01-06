@@ -78,9 +78,32 @@ Note: getting result is racy
 In case of maintaining stats, this results in better
 performance than AtomicLong under heavy contention.
 
+### Exchanger 
+- Play ping pong between two threads using Exchanger
+
+
 
 ###### TODOs:
 
+### Phaser
+### CyclicBarrier
+
+Separating launching of tasks and processing their results
+
+### ForkJoinPool 
+Running tasks asynchronously 
+
+Difference between invoke(), invokeAll(), fork(), join() etc.
+
+
+FutureTask - How to execute another function post the task
+is complete.
+
+How to handle uncaught exceptions in the run() method of threads?
+
+ThreadGroups
+
+ThreadFactory
 
 ### CloseableFuture
 ### StampedLocks
@@ -93,26 +116,5 @@ Can you implement a situation where this leads to
 a "deadlock" 
 
 Hint: effect is same but it is called something else (not livelock :)
-
-
-How to handle uncaught exceptions in the run() method of threads?
-
-ThreadGroups
-
-ThreadFactory
-
-
-Separating launching of tasks and processing their results
-
-### Phaser
-### CyclicBarrier
-### Exchanger
-### ForkJoinPool
-Running tasks asynchronously 
-
-Difference between invoke(), invokeAll(), fork(), join() etc.
-
-FutureTask - How to execute another function post the task
-is complete.
 
 TransferQueue
