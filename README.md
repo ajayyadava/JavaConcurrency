@@ -91,27 +91,30 @@ number of threads and not the number of invocations
 Separating concerns of submitting tasks and processing results
 
 
-###### TODOs: 
-
 ### Phaser
+- Sample program to illustrate register(), arriveAndAwaitAdvance(), and arriveAndDeregister() 
+- Simulate a test where all students finish exercises together.
+Print messages whenever phase changes.
+Simulate a late student joining the exam.
+
+###### TODOs: 
 
 ### ForkJoinPool 
 Running tasks asynchronously 
 
 Difference between invoke(), invokeAll(), fork(), join() etc.
 
-
 FutureTask - How to execute another function post the task
 is complete.
 
+
 How to handle uncaught exceptions in the run() method of threads?
-
 ThreadGroups
-
 ThreadFactory
 
 ### CloseableFuture
 ### StampedLocks
+### TransferQueue
 
 1. Show an example of deadlock.
 
@@ -122,4 +125,4 @@ a "deadlock"
 
 Hint: effect is same but it is called something else (not livelock :)
 
-TransferQueue
+
