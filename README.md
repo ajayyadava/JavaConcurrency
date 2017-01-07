@@ -97,10 +97,12 @@ Separating concerns of submitting tasks and processing results
 Print messages whenever phase changes.
 Simulate a late student joining the exam.
 
-###### TODOs: 
-
 ### ForkJoinPool 
-Running tasks asynchronously 
+    1.  - Understanding ForkJoinTask, RecursiveAction, RecursiveTask
+        - pool.invoke() vs. pool.execute() vs pool.submit()
+    
+
+###### TODOs: 
 
 Difference between invoke(), invokeAll(), fork(), join() etc.
 
