@@ -101,7 +101,9 @@ Simulate a late student joining the exam.
     1.  - Understanding ForkJoinTask, RecursiveAction, RecursiveTask
         - pool.invoke() vs. pool.execute() vs pool.submit()
     
-
+    2. Divide and Conquer using ForkJoinPool
+       - Using ForkJoinTask.invokeAll() 
+       - Grouping results of sub-tasks
 ###### TODOs: 
 
 Difference between invoke(), invokeAll(), fork(), join() etc.
