@@ -58,6 +58,8 @@ threads which counted down.
 - Running tasks which return result
     - Running multiple tasks and processing first result
     - Running multiple tasks and processing all results
+- ```FutureTask``` - How to execute another function post the task
+  is complete.
 
 ### AtomicLong / AtomicInteger
 - How to use CAS for better performance than locks
@@ -108,8 +110,6 @@ Simulate a late student joining the exam.
 
 ###### TODOs: 
 
-FutureTask - How to execute another function post the task
-is complete.
 
 
 How to handle uncaught exceptions in the run() method of threads?
