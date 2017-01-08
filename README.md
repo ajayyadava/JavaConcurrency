@@ -102,11 +102,11 @@ Simulate a late student joining the exam.
         - pool.invoke() vs. pool.execute() vs pool.submit()
     
     2. Divide and Conquer using ForkJoinPool
-       - Using ForkJoinTask.invokeAll() 
+       - Using ForkJoinTask.invokeAll() [ Synchronous but better reuse of threads] 
        - Grouping results of sub-tasks
+    3. Asynchronous methods - ForkJoinTask.fork() and ForkJoinTask.join()
+    4. Executing another task once a forkjointask finishes 
 ###### TODOs: 
-
-Difference between invoke(), invokeAll(), fork(), join() etc.
 
 FutureTask - How to execute another function post the task
 is complete.
