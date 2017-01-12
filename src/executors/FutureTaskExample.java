@@ -8,7 +8,9 @@ public class FutureTaskExample {
 
         @Override
         public String call() throws Exception {
-            System.out.println("Callable executed");
+            System.out.println("Callable started.");
+            TimeUnit.MILLISECONDS.sleep(100);
+            System.out.println("Callable completed.");
             return "Task Result";
         }
     }
@@ -17,8 +19,10 @@ public class FutureTaskExample {
         Callback(Callable<String> callable) {
             super(callable);
         }
+
         @Override
         protected void done() {
+            System.out.println("Entering done.");
             try {
                 String result = this.get();
                 System.out.println("Executing callback for task with result: " + result);
