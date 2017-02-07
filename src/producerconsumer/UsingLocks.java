@@ -14,11 +14,16 @@ import java.util.concurrent.locks.ReentrantLock;
  2. Conditions have both notifyAll() and signalAll() - remember that notifyAll() is inherited from Object and works on
  this so the correct method to be called is signalAll()
 
- 3. We could have followed the SynchronizedAndWait approach i.e.
- created a common buffer and pass it to Producer and Consumer along with the lock but that will
- make the code bloated
+ 3. 
 
- so we have followed the BlockingQueue approach.
+ There are 2 approaches:
+ 1. implement the produce and consume method as part of producer and consumer.
+ 2. Implement the produce and consume method as part of the buffer.
+
+ In both cases the locks need to be same, so either you use buffer instance or pass around the locks as well.
+
+ Cleaner approach is the one where the produce() and consume() methods are part of the buffer
+ (as in java - BlockingQueue) so here we have followed the BlockingQueue approach.
 
  */
 public class UsingLocks {
