@@ -44,13 +44,13 @@ public class ThreadLocalRandomExample {
                     .forEach(i -> {
                         String prefix = name + "-" + i;
 
-                        // randomNumber [0, 10). Upper Bound included.
+                        // randomNumber [0, 10). Upper Bound Excluded.
                         int randomNumber = ThreadLocalRandom.current().nextInt(10);
-                        System.out.println(prefix + " Excluded[1, 10) " + randomNumber);
+                        System.out.println(prefix + " Excluded[0, 10) " + randomNumber);
 
-                        // randomNumber [1, 10). Upper Bound is exclusive
+                        // randomNumber [1, 10). Upper Bound  Excluded
                         randomNumber = ThreadLocalRandom.current().nextInt(1, 10);
-                        System.out.println(prefix + " Included[1, 10] " + randomNumber);
+                        System.out.println(prefix + " Included[1, 10) " + randomNumber);
 
                     });
         }
@@ -59,7 +59,7 @@ public class ThreadLocalRandomExample {
     public static void main(String[] args) {
 
         // range with end Exclusive
-        IntStream.range(0, 2)
+        IntStream.range(0, 200)
                 // example of expression lambda
                 .forEach(i -> new Thread(new Task("Thread"+i)).start());
 
